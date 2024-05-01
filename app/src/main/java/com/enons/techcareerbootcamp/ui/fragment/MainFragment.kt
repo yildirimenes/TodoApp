@@ -36,12 +36,6 @@ class MainFragment : Fragment() {
             Navigation.transition(it,R.id.toSaveScreen)
         }
 
-        /*binding.buttonToUpdate.setOnClickListener {
-            val toDo = ToDos(1,"Sport")
-            val toUpdateScreen = MainFragmentDirections.toUpdateScreen(toDo = toDo)
-            Navigation.findNavController(it).navigate(toUpdateScreen)
-        }*/
-
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextChange(newText: String): Boolean {//Harf girdikçe ve sildikçe çalışır.
                 viewModel.search(newText)
